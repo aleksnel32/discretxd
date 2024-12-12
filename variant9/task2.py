@@ -4,14 +4,10 @@ n = int(input("Введите размерность n: "))
 chessboard = [[0] * n for _ in range(n)]
 
 
-if n % 2 == 0:
-    for i in range(n):
-        for j in range(n):
-            chessboard[i][j] = (i + j) % 2
-else:
-    for i in range(n):
-        for j in range(n):
-            chessboard[i][j] = (i + j + 1) % 2
+for i in range(n):
+    for j in range(n):
+        #n % 2 в скобке нужна чтобы сдвигать сетку на 1 при нечетном варианте
+        chessboard[i][j] = (i + j + n % 2) % 2 
 
 
 
