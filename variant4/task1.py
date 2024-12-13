@@ -3,13 +3,16 @@
 
 
 def minv(list):
-    result = 9999999
+    result = 99999999
     for item in list:
-        if result < item:
+        if result > item:
             result = item
-    return item
+    return result
+
+
 
 B = list(map(int, input().split()))
+print(minv(B))
 imin = B.index(minv(B))
 
 B.pop(imin)
