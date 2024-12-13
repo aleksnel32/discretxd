@@ -12,7 +12,7 @@ def maxv(list):
 
 
 def minv(list):
-    result = 9999
+    result = 99999999
     for item in list:
         if result > item:
             result = item
